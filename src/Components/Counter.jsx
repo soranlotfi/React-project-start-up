@@ -1,7 +1,10 @@
-
-const Counter = ()=>{
+// import {Component} from "react";
+const Counter = (props)=>{
+    const {count} = props
+    console.log(props)
+    props.count===5?alert("hello"):alert("bye");
     return(
-        <h1>{Math.floor(Math.random()*1000)} شماره ی تصادفی : </h1>
+        <h1>{count}</h1>
     )
 }
 
