@@ -6,9 +6,13 @@ const  App = ()=>{
     return(
         <div className="Soran">
             <Counter count={5}/>
-            {/*<Counter name = "soran" isLoggedIn={true}></Counter>*/}
-            {/*<Counter myArray={[1,2,3,4]}/>*/}
-
+            <Counter name = "soran" isLoggedIn={true}>
+                hello everybody
+            </Counter>
+            <Counter myArray={[1,2,3,4]}/>
+            <Counter count = {10}>
+                این شمارنده ی من است
+            </Counter>
         </div>
     )
 }
