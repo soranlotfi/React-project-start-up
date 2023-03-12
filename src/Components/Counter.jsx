@@ -6,12 +6,12 @@ const Counter = (props)=>{
     return(
         <div>
             <h1> شمارنده ی من :{count}</h1>
-            <p>{props.children}</p>
+            <p>{props.count || 60}</p>
         </div>
     )
 }
-Counter.defaultProps = {
-    count : 25
-}
+// Counter.defaultProps = {
+//     count : 25
+// }
 
 export default  Counter;
