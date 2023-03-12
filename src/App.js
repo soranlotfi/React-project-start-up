@@ -1,6 +1,6 @@
-
 import{useState} from "react";
-
+import Counter from "./Components/Counter";
+import "./style/style.css"
 const App =  ()=>{
     const [count ,setCount] = useState(50);
     const increaseCount = ()=>{
@@ -13,14 +13,11 @@ const App =  ()=>{
         setCount(50)
     }
         return(
-            <div>
-                <header>
+            <div className={"app"}>
+                <header >
                     <h1>شمارنده ی من </h1>
                 </header>
-                <p>{count}</p>
-                <button onClick={increaseCount}>افزایش شماره </button>
-                <button onClick={decreaseCount}>کاهش شماره </button>
-                <button onClick={resetCount}>بازنشانی شماره </button>
+               <Counter/>
             </div>
         )
 }
