@@ -1,0 +1,8 @@
+
+                                     state and props comparison in React
+
+                              Props	                                       State
+Datasource	    Passed down from parent components	            Managed internally by the component
+Update	        Immutable, cannot be modified by child	        Mutable, can be updated by the component
+Ownership	    Owned by the parent component	                Owned by the component itself
+Purpose	        Used for configuration and customization of     components	Used for managing dynamic and changing data

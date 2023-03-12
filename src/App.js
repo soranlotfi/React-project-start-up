@@ -1,20 +1,30 @@
+import {Component} from "react";
 
-import "./style/style.css"
-import Counter from "./Components/Counter";
+class App extends  Component{
 
-const  App = ()=>{
-    return(
-        <div className="Soran">
-            <Counter count={5}/>
-            <Counter name = "soran" isLoggedIn={true}>
-                hello everybody
-            </Counter>
-            <Counter myArray={[1,2,3,4]}/>
-            <Counter count = {10}>
-                این شمارنده ی من است
-            </Counter>
-        </div>
-    )
+state = {
+    name:"soran",
+    lastName:"lotfi",
+    count:0,
 }
 
-export default App;
+changeState(){
+    this.setState({count:5})
+}
+
+    render(){
+        const {count,name,lastName}=this.state
+        return(
+            <div>
+                <header>
+                    <h1>شمارنده ی من </h1>
+                </header>
+                <p>{count}</p>
+                <p>{name}</p>
+                <p>{lastName}</p>
+
+            </div>
+        )
+    }
+}
+export  default  App;
