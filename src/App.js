@@ -1,30 +1,26 @@
-import {Component} from "react";
 
-class App extends  Component{
+import{useState} from "react";
 
-state = {
-    name:"soran",
-    lastName:"lotfi",
-    count:0,
-}
+const App =  ()=>{
+    const [count ,setCount] = useState(50);
+    const changeCount = ()=>{
+        setCount(80)
+    }
 
-changeState(){
-    this.setState({count:5})
-}
+    let arr = [1,2,3,4]
+    console.log( "before:" + arr)
+    arr=[arr[0],...arr.slice(3,4) , 10 ,15]
+    console.log("after:" + arr)
 
-    render(){
-        const {count,name,lastName}=this.state
+
         return(
             <div>
                 <header>
                     <h1>شمارنده ی من </h1>
                 </header>
                 <p>{count}</p>
-                <p>{name}</p>
-                <p>{lastName}</p>
 
             </div>
         )
-    }
 }
 export  default  App;

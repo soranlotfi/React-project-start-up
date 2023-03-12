@@ -1,4 +1,13 @@
 
+React props (short for "properties") are a way of passing data from a parent component to a child
+component in React. Props allow components to be reusable and modular, by letting them receive
+different data and render accordingly.
+
+React state refers to the current data or values that a React component holds and manages
+internally.It is used to store and manage component-specific data that changes over time,
+such as user input, user interface state, or data fetched from an API.
+
+
                                      state and props comparison in React
 
                               Props	                                       State
@@ -6,3 +15,15 @@ Datasource	    Passed down from parent components	            Managed internally
 Update	        Immutable, cannot be modified by child	        Mutable, can be updated by the component
 Ownership	    Owned by the parent component	                Owned by the component itself
 Purpose	        Used for configuration and customization of     components	Used for managing dynamic and changing data
+
+
+
+
+                       evnts in react and managing them in functional components
+                                    "handeling events => camelCase "
+
+
+
+               html                                                 react
+
+               onclick                                              onClick
