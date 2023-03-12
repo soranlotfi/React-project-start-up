@@ -3,23 +3,24 @@ import{useState} from "react";
 
 const App =  ()=>{
     const [count ,setCount] = useState(50);
-    const changeCount = ()=>{
-        setCount(80)
+    const increaseCount = ()=>{
+        setCount(count+1)
     }
-
-    let arr = [1,2,3,4]
-    console.log( "before:" + arr)
-    arr=[arr[0],...arr.slice(3,4) , 10 ,15]
-    console.log("after:" + arr)
-
-
+    const decreaseCount = ()=>{
+        setCount(count-1)
+    }
+    const resetCount = ()=>{
+        setCount(50)
+    }
         return(
             <div>
                 <header>
                     <h1>شمارنده ی من </h1>
                 </header>
                 <p>{count}</p>
-
+                <button onClick={increaseCount}>افزایش شماره </button>
+                <button onClick={decreaseCount}>کاهش شماره </button>
+                <button onClick={resetCount}>بازنشانی شماره </button>
             </div>
         )
 }
